@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 // Generate a random Employer ID for demo/validation purposes
 function generateEmployerId() {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-  let id = 'VF-';
+  let id = 'NB-';
   for (let i = 0; i < 4; i++) id += chars[Math.floor(Math.random() * chars.length)];
   id += '-';
   for (let i = 0; i < 4; i++) id += chars[Math.floor(Math.random() * chars.length)];
@@ -24,8 +24,8 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
           <div
             className="w-6 h-6 rounded-full flex items-center justify-center font-mono-label transition-all"
             style={{
-              background: i < current ? 'var(--olive)' : i === current ? 'var(--forest)' : 'rgba(24,37,27,0.1)',
-              color: i <= current ? 'white' : 'rgba(24,37,27,0.35)',
+              background: i < current ? 'var(--olive)' : i === current ? 'var(--forest)' : 'rgba(10,31,26,0.1)',
+              color: i <= current ? 'white' : 'rgba(10,31,26,0.35)',
               fontSize: '0.55rem',
             }}
           >
@@ -40,7 +40,7 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
           {i < total - 1 && (
             <div
               className="w-8 h-px"
-              style={{ background: i < current ? 'var(--olive)' : 'rgba(24,37,27,0.12)' }}
+              style={{ background: i < current ? 'var(--olive)' : 'rgba(10,31,26,0.12)' }}
             />
           )}
         </div>
@@ -62,6 +62,7 @@ export default function SignupPage() {
   const [validEmployerId, setValidEmployerId] = useState('');
   const [accountNotifications, setAccountNotifications] = useState(false);
   const [customerCare, setCustomerCare] = useState(false);
+  const [phoneError, setPhoneError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
 
@@ -75,6 +76,7 @@ export default function SignupPage() {
     setFormData({ ...formData, [name]: value });
     if (name === 'email') setEmailError('');
     if (name === 'employerId') setEmployerIdError('');
+    if (name === 'phone') setPhoneError('');
   };
 
   const handleStep1Continue = () => {
@@ -96,6 +98,15 @@ export default function SignupPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (accountNotifications || customerCare) {
+      const digits = formData.phone.replace(/\D/g, '');
+      const tenDigits = digits.length === 11 && digits.startsWith('1') ? digits.slice(1) : digits;
+      if (tenDigits.length !== 10) {
+        setPhoneError('Enter a valid mobile number to receive texts.');
+        return;
+      }
+    }
+    setPhoneError('');
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
@@ -106,7 +117,7 @@ export default function SignupPage() {
   const steps = [
     { label: 'Your Info', desc: 'Tell us who you are' },
     { label: 'Employer', desc: 'Connect your employer' },
-    { label: 'AI Alerts', desc: 'Set up notifications' },
+    { label: 'Savings Alerts', desc: 'Set up notifications' },
   ];
 
   return (
@@ -118,7 +129,7 @@ export default function SignupPage() {
         {/* ── LEFT: Forest panel ── */}
         <div
           className="relative hidden md:flex flex-col justify-between p-12 pt-32"
-          style={{ background: 'linear-gradient(135deg, #0D1526 0%, #1A2340 50%, #1E2D52 100%)' }}
+          style={{ background: 'linear-gradient(135deg, #0A1F1A 0%, #0F2E26 50%, #143D32 100%)' }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -127,19 +138,19 @@ export default function SignupPage() {
             className="absolute inset-0 w-full h-full object-cover"
             
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(61,90,138,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(61,90,138,0.15) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(26,122,82,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(26,122,82,0.15) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
           <div className="relative z-10">
-            <p className="font-mono-label mb-8" style={{ color: 'rgba(245,243,235,0.45)', fontSize: '0.65rem' }}>
+            <p className="font-mono-label mb-8" style={{ color: 'rgba(241,248,244,0.45)', fontSize: '0.65rem' }}>
               Employee Onboarding
             </p>
             <h2 className="headline-lg text-white mb-6" style={{ maxWidth: '380px' }}>
-              Your financial
+              Your safety net
               <br />
-              <em className="italic-accent">wellness starts here.</em>
+              <em className="italic-accent">starts here.</em>
             </h2>
-            <p style={{ color: 'rgba(245,243,235,0.6)', fontSize: '0.95rem', lineHeight: 1.8, maxWidth: '320px' }}>
-              Set up your Verdant Finance account and connect to your employer&apos;s financial wellness program in minutes.
+            <p style={{ color: 'rgba(241,248,244,0.6)', fontSize: '0.95rem', lineHeight: 1.8, maxWidth: '320px' }}>
+              Create your Nest Builder Finance account and join your employer&apos;s savings program in minutes. Set goals, get payday reminders and build an emergency fund at your own pace.
             </p>
           </div>
 
@@ -150,8 +161,8 @@ export default function SignupPage() {
                 <div
                   className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-mono-label"
                   style={{
-                    background: i < step ? 'var(--olive)' : i === step ? 'rgba(245,243,235,0.2)' : 'rgba(245,243,235,0.08)',
-                    border: i === step ? '1px solid rgba(245,243,235,0.4)' : 'none',
+                    background: i < step ? 'var(--olive)' : i === step ? 'rgba(241,248,244,0.2)' : 'rgba(241,248,244,0.08)',
+                    border: i === step ? '1px solid rgba(241,248,244,0.4)' : 'none',
                     color: 'white',
                     fontSize: '0.6rem',
                   }}
@@ -165,10 +176,10 @@ export default function SignupPage() {
                   )}
                 </div>
                 <div>
-                  <p style={{ color: i <= step ? 'var(--ivory)' : 'rgba(245,243,235,0.4)', fontWeight: 600, fontSize: '0.85rem' }}>
+                  <p style={{ color: i <= step ? 'var(--ivory)' : 'rgba(241,248,244,0.4)', fontWeight: 600, fontSize: '0.85rem' }}>
                     {s.label}
                   </p>
-                  <p style={{ color: 'rgba(245,243,235,0.35)', fontSize: '0.75rem' }}>{s.desc}</p>
+                  <p style={{ color: 'rgba(241,248,244,0.35)', fontSize: '0.75rem' }}>{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -183,7 +194,7 @@ export default function SignupPage() {
               <div className="text-center py-12">
                 <div
                   className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
-                  style={{ background: 'rgba(72,82,56,0.12)' }}
+                  style={{ background: 'rgba(26,122,82,0.12)' }}
                 >
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" strokeWidth="2">
                     <path d="M5 13l4 4L19 7" />
@@ -192,8 +203,8 @@ export default function SignupPage() {
                 <h2 className="headline-md mb-4" style={{ color: 'var(--forest)' }}>
                   You&apos;re all set.
                 </h2>
-                <p style={{ color: 'rgba(24,37,27,0.55)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '2rem' }}>
-                  Your account has been created. Check your email for next steps to access your financial wellness dashboard.
+                <p style={{ color: 'rgba(10,31,26,0.55)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '2rem' }}>
+                  Your account has been created. Check your email for next steps to access your savings dashboard.
                 </p>
                 <Link href="/" className="btn-forest">
                   Back to Home
@@ -214,7 +225,7 @@ export default function SignupPage() {
                       <br />
                       <em className="italic-accent">the basics.</em>
                     </h1>
-                    <p style={{ color: 'rgba(24,37,27,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '2rem' }}>
+                    <p style={{ color: 'rgba(10,31,26,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '2rem' }}>
                       Enter your name and work email to create your account.
                     </p>
                     <div className="space-y-4">
@@ -231,8 +242,8 @@ export default function SignupPage() {
                           placeholder="Jane Smith"
                           className="w-full px-4 py-3 rounded-xl text-sm"
                           style={{
-                            background: 'rgba(24,37,27,0.04)',
-                            border: '1px solid rgba(24,37,27,0.12)',
+                            background: 'rgba(10,31,26,0.04)',
+                            border: '1px solid rgba(10,31,26,0.12)',
                             color: 'var(--charcoal)',
                             outline: 'none',
                             fontFamily: 'Inter, sans-serif',
@@ -252,8 +263,8 @@ export default function SignupPage() {
                           placeholder="jane@company.com"
                           className="w-full px-4 py-3 rounded-xl text-sm"
                           style={{
-                            background: 'rgba(24,37,27,0.04)',
-                            border: `1px solid ${emailError ? '#dc2626' : 'rgba(24,37,27,0.12)'}`,
+                            background: 'rgba(10,31,26,0.04)',
+                            border: `1px solid ${emailError ? '#dc2626' : 'rgba(10,31,26,0.12)'}`,
                             color: 'var(--charcoal)',
                             outline: 'none',
                             fontFamily: 'Inter, sans-serif',
@@ -289,8 +300,8 @@ export default function SignupPage() {
                       <br />
                       <em className="italic-accent">employer.</em>
                     </h1>
-                    <p style={{ color: 'rgba(24,37,27,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '2rem' }}>
-                      Enter the Employer ID from your onboarding email to link your account to your company&apos;s wellness program.
+                    <p style={{ color: 'rgba(10,31,26,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '2rem' }}>
+                      Enter the Employer ID from your onboarding email to link your account to your company&apos;s savings program.
                     </p>
 
                     <div className="space-y-4">
@@ -307,8 +318,8 @@ export default function SignupPage() {
                           placeholder={validEmployerId}
                           className="w-full px-4 py-3 rounded-xl text-sm"
                           style={{
-                            background: 'rgba(24,37,27,0.04)',
-                            border: `1px solid ${employerIdError ? '#dc2626' : 'rgba(24,37,27,0.12)'}`,
+                            background: 'rgba(10,31,26,0.04)',
+                            border: `1px solid ${employerIdError ? '#dc2626' : 'rgba(10,31,26,0.12)'}`,
                             color: 'var(--charcoal)',
                             outline: 'none',
                             fontFamily: 'JetBrains Mono, monospace',
@@ -318,7 +329,7 @@ export default function SignupPage() {
                         {employerIdError ? (
                           <p style={{ fontSize: '0.72rem', color: '#dc2626', marginTop: '0.4rem' }}>{employerIdError}</p>
                         ) : (
-                          <p style={{ fontSize: '0.7rem', color: 'rgba(24,37,27,0.4)', marginTop: '0.4rem' }}>
+                          <p style={{ fontSize: '0.7rem', color: 'rgba(10,31,26,0.4)', marginTop: '0.4rem' }}>
                             Find your Employer ID in your onboarding email or ask your HR team.
                           </p>
                         )}
@@ -329,7 +340,7 @@ export default function SignupPage() {
                           onClick={() => setStep(0)}
                           className="font-mono-label px-5 py-3 rounded-full transition-all"
                           style={{
-                            border: '1px solid rgba(24,37,27,0.2)',
+                            border: '1px solid rgba(10,31,26,0.2)',
                             color: 'var(--forest)',
                             fontSize: '0.65rem',
                             background: 'transparent',
@@ -354,39 +365,40 @@ export default function SignupPage() {
                   </>
                 )}
 
-                {/* ── STEP 2: AI Alerts ── */}
+                {/* ── STEP 2: Savings Alerts ── */}
                 {step === 2 && (
                   <form onSubmit={handleSubmit}>
                     <p className="font-mono-label mb-4" style={{ color: 'var(--olive)', fontSize: '0.65rem' }}>
-                      Step 3 of 3 — AI Financial Alerts
+                      Step 3 of 3 — Savings Alerts
                     </p>
                     <h1 className="headline-md mb-2" style={{ color: 'var(--forest)', fontSize: '1.75rem' }}>
-                      Stay informed
+                      Stay on track
                       <br />
-                      <em className="italic-accent">by your AI advisor.</em>
+                      <em className="italic-accent">with Nest Coach.</em>
                     </h1>
-                    <p style={{ color: 'rgba(24,37,27,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-                      Verdant AI can send you personalized financial insights, goal reminders, and spending alerts directly to your phone — so you never miss an important moment in your financial journey.
+                    <p style={{ color: 'rgba(10,31,26,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+                      Nest Coach can text you savings goal progress, emergency fund milestones, payday savings reminders and account notifications. Text alerts are optional, and you can create your account without them.
                     </p>
 
                     {/* What you'll receive */}
                     <div
                       className="rounded-xl p-4 mb-5"
-                      style={{ background: 'rgba(72,82,56,0.06)', border: '1px solid rgba(72,82,56,0.12)' }}
+                      style={{ background: 'rgba(26,122,82,0.06)', border: '1px solid rgba(26,122,82,0.12)' }}
                     >
                       <p className="font-mono-label mb-3" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>
-                        What Verdant AI will text you
+                        What Nest Coach will text you
                       </p>
                       <div className="space-y-2">
                         {[
-                          { icon: '💡', text: 'Personalized financial insights based on your goals' },
-                          { icon: '🎯', text: 'Goal milestone alerts when you hit savings targets' },
-                          { icon: '📊', text: 'Weekly spending summaries and budget reminders' },
+                          { icon: '🎯', text: 'Goal progress updates on the savings goals you set' },
+                          { icon: '🌱', text: 'Emergency fund milestones, like being halfway there' },
+                          { icon: '📅', text: 'Payday savings reminders on your pay schedule' },
                           { icon: '🔔', text: 'Account notifications and important updates' },
+                          { icon: '✨', text: 'Promotional (if selected): new program features and monthly savings challenges' },
                         ].map((item, i) => (
                           <div key={i} className="flex items-start gap-2">
                             <span style={{ fontSize: '0.85rem' }}>{item.icon}</span>
-                            <p style={{ fontSize: '0.78rem', color: 'rgba(24,37,27,0.65)', lineHeight: 1.5 }}>{item.text}</p>
+                            <p style={{ fontSize: '0.78rem', color: 'rgba(10,31,26,0.65)', lineHeight: 1.5 }}>{item.text}</p>
                           </div>
                         ))}
                       </div>
@@ -395,27 +407,30 @@ export default function SignupPage() {
                     {/* Phone */}
                     <div className="mb-5">
                       <label className="font-mono-label block mb-2" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>
-                        Mobile Phone Number *
+                        Mobile Phone Number (required if you opt in to texts)
                       </label>
                       <input
                         type="tel"
                         name="phone"
-                        required
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="(555) 555-5555"
                         className="w-full px-4 py-3 rounded-xl text-sm"
                         style={{
-                          background: 'rgba(24,37,27,0.04)',
-                          border: '1px solid rgba(24,37,27,0.12)',
+                          background: 'rgba(10,31,26,0.04)',
+                          border: `1px solid ${phoneError ? '#dc2626' : 'rgba(10,31,26,0.12)'}`,
                           color: 'var(--charcoal)',
                           outline: 'none',
                           fontFamily: 'Inter, sans-serif',
                         }}
                       />
-                      <p style={{ fontSize: '0.7rem', color: 'rgba(24,37,27,0.4)', marginTop: '0.4rem' }}>
-                        This is the number Verdant AI will use to send you alerts.
-                      </p>
+                      {phoneError ? (
+                        <p style={{ fontSize: '0.72rem', color: '#dc2626', marginTop: '0.4rem' }}>{phoneError}</p>
+                      ) : (
+                        <p style={{ fontSize: '0.7rem', color: 'rgba(10,31,26,0.4)', marginTop: '0.4rem' }}>
+                          If you opt in below, this is the number Nest Builder Finance will use to send you text alerts.
+                        </p>
+                      )}
                     </div>
 
                     {/* Terms */}
@@ -428,7 +443,7 @@ export default function SignupPage() {
                           className="mt-1 w-4 h-4 rounded flex-shrink-0"
                           style={{ accentColor: 'var(--olive)' }}
                         />
-                        <label htmlFor="termsAgreement" style={{ fontSize: '0.75rem', color: 'rgba(24,37,27,0.5)', lineHeight: 1.6 }}>
+                        <label htmlFor="termsAgreement" style={{ fontSize: '0.75rem', color: 'rgba(10,31,26,0.5)', lineHeight: 1.6 }}>
                           I have read and agree to the{' '}
                           <Link href="/privacy" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>Privacy Policy</Link>
                           {' '}and{' '}
@@ -444,8 +459,8 @@ export default function SignupPage() {
                           className="mt-1 w-4 h-4 rounded flex-shrink-0"
                           style={{ accentColor: 'var(--olive)' }}
                         />
-                        <label htmlFor="accountNotifications" style={{ fontSize: '0.72rem', color: 'rgba(24,37,27,0.45)', lineHeight: 1.6 }}>
-                          By checking this box, I agree to receive Transactional Account Notification SMS messages from Verdant Finance at the phone number provided. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services.
+                        <label htmlFor="accountNotifications" style={{ fontSize: '0.72rem', color: 'rgba(10,31,26,0.45)', lineHeight: 1.6 }}>
+                          By checking this box, I agree to receive Transactional Account Notification SMS messages from Nest Builder Finance at the phone number provided. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services.
                         </label>
                       </div>
                       <div className="flex items-start gap-3">
@@ -457,8 +472,8 @@ export default function SignupPage() {
                           className="mt-1 w-4 h-4 rounded flex-shrink-0"
                           style={{ accentColor: 'var(--olive)' }}
                         />
-                        <label htmlFor="customerCare" style={{ fontSize: '0.72rem', color: 'rgba(24,37,27,0.45)', lineHeight: 1.6 }}>
-                          By checking this box, I agree to receive Promotional Marketing SMS messages from Verdant Finance at the phone number provided, including special offers and exclusive updates. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services.
+                        <label htmlFor="customerCare" style={{ fontSize: '0.72rem', color: 'rgba(10,31,26,0.45)', lineHeight: 1.6 }}>
+                          By checking this box, I agree to receive Promotional Marketing SMS messages from Nest Builder Finance at the phone number provided, including special offers and exclusive updates. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services.
                         </label>
                       </div>
                     </div>
@@ -469,7 +484,7 @@ export default function SignupPage() {
                         onClick={() => setStep(1)}
                         className="font-mono-label px-5 py-3 rounded-full transition-all"
                         style={{
-                          border: '1px solid rgba(24,37,27,0.2)',
+                          border: '1px solid rgba(10,31,26,0.2)',
                           color: 'var(--forest)',
                           fontSize: '0.65rem',
                           background: 'transparent',

@@ -28,14 +28,14 @@ export default function ChallengesPage() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-orange-700 mb-8"
             style={{ background: 'rgba(251,146,60,0.15)', border: '1px solid rgba(251,146,60,0.3)' }}>
             <span>🏆</span>
-            Wellness Challenges
+            Savings Challenges
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight mb-6">
-            Turn everyday movement into
-            <br /><span className="gradient-text-green">something your team does together.</span>
+            Make saving feel like
+            <br /><span className="gradient-text-green">a game you can win.</span>
           </h1>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-            Team Cross Fit challenges connect to real activity data from employees&apos; health apps — so participation is automatic, not manual. No logging. No guessing. Just real wellness.
+            Nest Builder Finance savings challenges turn small habits into friendly goals. Join on your own or with coworkers, at your own pace. Challenges are optional and educational only.
           </p>
         </div>
       </section>
@@ -45,39 +45,39 @@ export default function ChallengesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 tracking-tight mb-4">
-              Four types of challenges.
+              Four ways to join in.
             </h2>
             <p className="text-lg text-gray-500">
-              Each designed to drive real participation and healthy habits.
+              Each one is designed to make saving simple, social and a little bit fun.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
 
-            {/* Step Challenges */}
+            {/* 52-Week Challenge */}
             <div className="glass-card p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
-                  style={{ background: 'rgba(22,163,74,0.12)' }}>👟</div>
+                  style={{ background: 'rgba(22,163,74,0.12)' }}>📅</div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">Step Challenges</h3>
-                  <p className="text-sm text-gray-400">Daily, weekly, or monthly goals</p>
+                  <h3 className="text-xl font-bold text-gray-900">52-Week Challenge</h3>
+                  <p className="text-sm text-gray-400">One small step each week</p>
                 </div>
               </div>
               <p className="text-gray-500 mb-6">
-                Set daily or cumulative step targets. Steps sync automatically from Apple Health and compatible devices. Employees see their progress in real time.
+                Set aside a little more each week for a full year. The 52-week challenge builds a steady habit, and you can follow the pace that suits you.
               </p>
               <div className="p-5 rounded-2xl mb-4" style={{ background: 'rgba(0,0,0,0.03)' }}>
                 <div className="flex justify-between items-center mb-2">
-                  <p className="text-sm font-semibold text-gray-900">10K Step Challenge</p>
-                  <span className="text-xs font-bold text-green-600">+100 pts</span>
+                  <p className="text-sm font-semibold text-gray-900">52-Week Challenge</p>
+                  <span className="text-xs font-bold text-green-600">Badge</span>
                 </div>
-                <p className="text-xs text-gray-400 mb-3">8,462 / 10,000 steps today</p>
-                <ProgressBar pct={84} color="#16a34a" />
-                <p className="text-xs text-gray-400 mt-1">84% complete</p>
+                <p className="text-xs text-gray-400 mb-3">Week 26 of 52 (sample)</p>
+                <ProgressBar pct={50} color="#16a34a" />
+                <p className="text-xs text-gray-400 mt-1">Halfway there</p>
               </div>
               <ul className="space-y-2">
-                {['Daily 10K step goals', 'Weekly cumulative targets', 'Monthly step totals', 'Automatic sync from Apple Health'].map(f => (
+                {['Weekly savings prompts', 'Flexible pace', 'Progress milestones', 'Payday reminders'].map(f => (
                   <li key={f} className="flex items-center gap-2 text-sm text-gray-600">
                     <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
                     {f}
@@ -86,23 +86,23 @@ export default function ChallengesPage() {
               </ul>
             </div>
 
-            {/* Movement Streaks */}
+            {/* No-Spend Weekend */}
             <div className="glass-card p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
-                  style={{ background: 'rgba(249,115,22,0.12)' }}>🔥</div>
+                  style={{ background: 'rgba(249,115,22,0.12)' }}>🏡</div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">Movement Streaks</h3>
-                  <p className="text-sm text-gray-400">Consistency over time</p>
+                  <h3 className="text-xl font-bold text-gray-900">No-Spend Weekend</h3>
+                  <p className="text-sm text-gray-400">A short, easy reset</p>
                 </div>
               </div>
               <p className="text-gray-500 mb-6">
-                Reward consistent activity over multiple days. Streaks build habits and keep employees engaged week after week — not just during a single challenge.
+                Skip non-essential spending for one weekend and see how it feels. It is a quick, low-pressure way to build awareness and keep a little extra for your goals.
               </p>
               <div className="p-5 rounded-2xl mb-4" style={{ background: 'rgba(0,0,0,0.03)' }}>
                 <div className="flex justify-between items-center mb-3">
-                  <p className="text-sm font-semibold text-gray-900">5-Day Movement Streak</p>
-                  <span className="text-xs font-bold text-orange-600">+250 pts</span>
+                  <p className="text-sm font-semibold text-gray-900">No-Spend Weekend</p>
+                  <span className="text-xs font-bold text-orange-600">Badge</span>
                 </div>
                 <div className="flex gap-2">
                   {[1,2,3,4,5].map(d => (
@@ -112,10 +112,10 @@ export default function ChallengesPage() {
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-gray-400 mt-2">4 of 5 days complete</p>
+                <p className="text-xs text-gray-400 mt-2">4 of 5 check-ins complete (sample)</p>
               </div>
               <ul className="space-y-2">
-                {['Daily movement targets', 'Multi-day streak tracking', 'Streak protection options', 'Bonus points for long streaks'].map(f => (
+                {['Friday-to-Sunday check-ins', 'Simple opt-in', 'Encouraging reminders', 'Completion badge'].map(f => (
                   <li key={f} className="flex items-center gap-2 text-sm text-gray-600">
                     <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
                     {f}
@@ -124,25 +124,25 @@ export default function ChallengesPage() {
               </ul>
             </div>
 
-            {/* Team Challenges */}
+            {/* Round-Up Week */}
             <div className="glass-card p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
-                  style={{ background: 'rgba(8,145,178,0.12)' }}>👥</div>
+                  style={{ background: 'rgba(8,145,178,0.12)' }}>🪙</div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">Team Challenges</h3>
-                  <p className="text-sm text-gray-400">Compete together</p>
+                  <h3 className="text-xl font-bold text-gray-900">Round-Up Week</h3>
+                  <p className="text-sm text-gray-400">Small amounts, big habit</p>
                 </div>
               </div>
               <p className="text-gray-500 mb-6">
-                Pit departments, locations, or custom teams against each other. Team challenges build camaraderie and drive higher participation than individual challenges alone.
+                For one week, round up each purchase in your head and set the difference aside for a goal. You track it yourself, and we cheer you on along the way.
               </p>
               <div className="p-5 rounded-2xl mb-4 space-y-3" style={{ background: 'rgba(0,0,0,0.03)' }}>
-                <p className="text-sm font-semibold text-gray-900 mb-2">Team Step Challenge</p>
+                <p className="text-sm font-semibold text-gray-900 mb-2">Round-Up Week Goals (sample)</p>
                 {[
-                  { name: '🥇 Product', steps: '1,284,430', pct: 100, color: '#16a34a' },
-                  { name: '🥈 Sales', steps: '1,201,220', pct: 94, color: '#0891b2' },
-                  { name: '🥉 Marketing', steps: '1,089,440', pct: 85, color: '#7c3aed' },
+                  { name: '🎄 Holiday Goal', steps: 'Day 5 of 7', pct: 70, color: '#16a34a' },
+                  { name: '🚗 Car Repair Fund', steps: 'Day 4 of 7', pct: 55, color: '#0891b2' },
+                  { name: '📦 Moving Fund', steps: 'Day 3 of 7', pct: 40, color: '#7c3aed' },
                 ].map(t => (
                   <div key={t.name}>
                     <div className="flex justify-between text-xs mb-1">
@@ -154,7 +154,7 @@ export default function ChallengesPage() {
                 ))}
               </div>
               <ul className="space-y-2">
-                {['Department vs. department', 'Custom team groupings', 'Real-time leaderboards', 'Team aggregate tracking'].map(f => (
+                {['Pick any savings goal', 'One-week commitment', 'Self-tracked and private', 'Friendly daily nudges'].map(f => (
                   <li key={f} className="flex items-center gap-2 text-sm text-gray-600">
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                     {f}
@@ -163,33 +163,33 @@ export default function ChallengesPage() {
               </ul>
             </div>
 
-            {/* Wellness Goals */}
+            {/* Emergency Fund Month */}
             <div className="glass-card p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
                   style={{ background: 'rgba(124,58,237,0.12)' }}>🌿</div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">Wellness Goals</h3>
-                  <p className="text-sm text-gray-400">Monthly programs</p>
+                  <h3 className="text-xl font-bold text-gray-900">Emergency Fund Month</h3>
+                  <p className="text-sm text-gray-400">Monthly program</p>
                 </div>
               </div>
               <p className="text-gray-500 mb-6">
-                Longer-form wellness programs that reward employees for completing a set number of wellness activities over a month. Flexible and inclusive by design.
+                A month-long program of small savings actions, like setting a goal, turning on payday reminders and reading a Nest Coach tip. Flexible and welcoming for everyone.
               </p>
               <div className="p-5 rounded-2xl mb-4" style={{ background: 'rgba(0,0,0,0.03)' }}>
                 <div className="flex justify-between items-center mb-3">
-                  <p className="text-sm font-semibold text-gray-900">Wellness Month</p>
-                  <span className="text-xs font-bold text-purple-600">+500 pts</span>
+                  <p className="text-sm font-semibold text-gray-900">Emergency Fund Month</p>
+                  <span className="text-xs font-bold text-purple-600">Badge</span>
                 </div>
                 <div className="grid grid-cols-5 gap-1.5 mb-2">
                   {Array.from({ length: 15 }).map((_, i) => (
                     <div key={i} className={`h-6 rounded-md ${i < 11 ? 'bg-purple-400' : 'bg-gray-100'}`} />
                   ))}
                 </div>
-                <p className="text-xs text-gray-400">11 of 15 activities complete</p>
+                <p className="text-xs text-gray-400">11 of 15 savings actions complete (sample)</p>
               </div>
               <ul className="space-y-2">
-                {['Monthly activity targets', 'Multiple activity types count', 'Flexible completion windows', 'Inclusive for all fitness levels'].map(f => (
+                {['Monthly action checklist', 'Many ways to take part', 'Flexible completion window', 'Welcoming for every budget'].map(f => (
                   <li key={f} className="flex items-center gap-2 text-sm text-gray-600">
                     <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
                     {f}
@@ -206,20 +206,20 @@ export default function ChallengesPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 tracking-tight mb-4">
-              Challenges that run themselves.
+              Challenges that keep things simple.
             </h2>
             <p className="text-lg text-gray-500">
-              HR teams launch challenges. Employees participate. Activity syncs automatically.
+              HR teams share the program. Employees choose what to join. Reminders handle the rest.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               {[
-                { icon: '⚡', title: 'Automatic activity tracking', desc: 'Steps, workouts, and movement sync from Apple Health automatically. Employees don\'t need to log anything manually.' },
-                { icon: '📊', title: 'Real-time progress', desc: 'Employees see their challenge progress update throughout the day as activity is recorded.' },
-                { icon: '🏆', title: 'Instant rewards', desc: 'When a challenge is completed, points are awarded automatically. No manual review required.' },
-                { icon: '🔔', title: 'Encouragement & milestones', desc: 'Employees receive notifications when they hit milestones, complete challenges, or build streaks.' },
+                { icon: '✅', title: 'Opt in on your own', desc: 'Every challenge is optional. Pick the ones that fit your life and skip the rest.' },
+                { icon: '📊', title: 'Clear progress', desc: 'See your challenge progress at a glance, with milestones along the way.' },
+                { icon: '🏆', title: 'Completion badges', desc: 'Finish a challenge and earn a badge in your profile. Badges are just for fun.' },
+                { icon: '🔔', title: 'Encouragement & reminders', desc: 'Get friendly nudges on payday and when you reach a milestone, by the channels you choose.' },
               ].map(item => (
                 <div key={item.title} className="flex items-start gap-4">
                   <span className="text-2xl flex-shrink-0">{item.icon}</span>
@@ -235,10 +235,10 @@ export default function ChallengesPage() {
               <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-4">Active Challenges</p>
               <div className="space-y-4">
                 {[
-                  { name: '10K Step Challenge', type: 'Daily', progress: 84, pts: '+100 pts', color: '#16a34a', icon: '👟' },
-                  { name: 'Movement Streak', type: '5-day', progress: 80, pts: '+250 pts', color: '#f97316', icon: '🔥' },
-                  { name: 'Team Step Challenge', type: 'Monthly', progress: 71, pts: 'Team', color: '#0891b2', icon: '👥' },
-                  { name: 'Wellness Month', type: '15 activities', progress: 73, pts: '+500 pts', color: '#7c3aed', icon: '🌿' },
+                  { name: '52-Week Challenge', type: 'Weekly', progress: 50, pts: 'Badge', color: '#16a34a', icon: '📅' },
+                  { name: 'No-Spend Weekend', type: '3 days', progress: 80, pts: 'Badge', color: '#f97316', icon: '🏡' },
+                  { name: 'Round-Up Week', type: '7 days', progress: 70, pts: 'Badge', color: '#0891b2', icon: '🪙' },
+                  { name: 'Emergency Fund Month', type: '15 actions', progress: 73, pts: 'Badge', color: '#7c3aed', icon: '🌿' },
                 ].map(c => (
                   <div key={c.name} className="p-4 rounded-2xl" style={{ background: 'rgba(0,0,0,0.03)' }}>
                     <div className="flex items-center justify-between mb-2">
@@ -264,15 +264,15 @@ export default function ChallengesPage() {
       {/* CTA */}
       <section className="py-20 px-6 relative" style={{ zIndex: 1 }}>
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Ready to launch your first challenge?</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Ready to take the first step?</h2>
           <p className="text-lg text-gray-500 mb-8">
-            HR teams can set up challenges in minutes. Employees join with a Company ID.
+            Employers can offer the program to their team. Employees join with an Employer ID.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/for-employers"
               className="px-8 py-4 text-base font-semibold text-white rounded-2xl shadow-xl hover:opacity-90 transition-all"
-              style={{ background: 'linear-gradient(135deg, #16a34a, #059669)' }}>
-              Set Up a Program
+              style={{ background: 'linear-gradient(135deg, #1A7A52, #3EC98A)' }}>
+              Offer It to Your Team
             </Link>
             <Link href="/talk-to-sales"
               className="px-8 py-4 text-base font-semibold text-gray-700 rounded-2xl glass-button">

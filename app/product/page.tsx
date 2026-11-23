@@ -15,19 +15,19 @@ export default function ProductPage() {
         style={{ background: 'var(--forest)' }}
       >
         <div className="max-w-4xl mx-auto text-center">
-          <p className="font-mono-label mb-8" style={{ color: 'rgba(245,243,235,0.45)', fontSize: '0.65rem' }}>
+          <p className="font-mono-label mb-8" style={{ color: 'rgba(241,248,244,0.45)', fontSize: '0.65rem' }}>
             The Product
           </p>
           <h1 className="headline-xl text-white mb-8">
-            One platform for
+            Simple tools for
             <br />
-            <em className="italic-accent">every financial journey.</em>
+            <em className="italic-accent">steady saving.</em>
           </h1>
-          <p style={{ color: 'rgba(245,243,235,0.65)', fontSize: '1.1rem', lineHeight: 1.8, maxWidth: '520px', margin: '0 auto 2.5rem' }}>
-            Verdant Finance brings together budgeting, goal planning, debt management, investing guidance, and AI-powered advice — all in one calm, unified experience.
+          <p style={{ color: 'rgba(241,248,244,0.65)', fontSize: '1.1rem', lineHeight: 1.8, maxWidth: '520px', margin: '0 auto 2.5rem' }}>
+            Nest Builder Finance brings savings goals, an emergency fund tracker, payday reminders and friendly tips together in one easy place. Educational tools and reminders only.
           </p>
           <Link href="/talk-to-sales" className="btn-primary">
-            Get Started
+            Offer It to Your Team
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
@@ -43,17 +43,17 @@ export default function ProductPage() {
               Core Features
             </p>
             <h2 className="headline-lg" style={{ color: 'var(--forest)' }}>
-              Everything employees need
+              Everything you need
               <br />
-              <em className="italic-accent">to feel financially secure.</em>
+              <em className="italic-accent">to start saving.</em>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: 'AI Financial Advisor',
-                desc: 'Employees can ask Verdant AI anything — how to pay off debt faster, whether they can afford a home, how to build an emergency fund. They get personalized, actionable answers based on their actual financial situation.',
+                title: 'Savings Goals',
+                desc: 'Name what you are saving for, like the holidays, a car repair or a move. Pick a pace that feels comfortable and change it whenever life changes.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 5v6m0 4h.01" />
@@ -61,8 +61,8 @@ export default function ProductPage() {
                 ),
               },
               {
-                title: 'Financial Dashboard',
-                desc: 'A clear, calm view of net worth, spending, savings progress, and financial goals. Employees see exactly where they stand and what to do next — without feeling overwhelmed.',
+                title: 'Emergency Fund Tracker',
+                desc: 'A clear, calm view of your progress toward a rainy-day cushion. Track what you have set aside and see how far you have come.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <rect x="3" y="3" width="7" height="7" rx="1" />
@@ -73,8 +73,8 @@ export default function ProductPage() {
                 ),
               },
               {
-                title: 'Goal Planning & Tracking',
-                desc: 'Set goals for emergency funds, debt payoff, home buying, retirement, and more. Verdant Finance builds a personalized plan and tracks progress automatically — adjusting as life changes.',
+                title: 'Payday Reminders',
+                desc: 'Get a friendly reminder on payday to set something aside for your goals, so saving fits into your routine.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M9 11l3 3L22 4" />
@@ -83,8 +83,8 @@ export default function ProductPage() {
                 ),
               },
               {
-                title: 'Spending Insights',
-                desc: 'Automatic categorization of spending with clear trends and patterns. Employees understand where their money goes and get AI-powered suggestions for where to optimize.',
+                title: 'Nest Coach Tips',
+                desc: 'Short, plain-language savings tips from Nest Coach, like how to start small or get back on track. Tips are educational only.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
@@ -93,8 +93,8 @@ export default function ProductPage() {
                 ),
               },
               {
-                title: 'Debt Management',
-                desc: 'Visualize all debt in one place — student loans, credit cards, auto loans. Get AI-generated payoff strategies (avalanche, snowball, or hybrid) tailored to each employee\'s situation.',
+                title: 'Progress Milestones',
+                desc: 'Celebrate the halfway point and every step along the way. Milestones keep motivation up and make progress easy to see.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <circle cx="12" cy="12" r="10" />
@@ -103,8 +103,8 @@ export default function ProductPage() {
                 ),
               },
               {
-                title: 'Retirement & Investing Guidance',
-                desc: 'Help employees understand their 401k, IRA, and investment options. Verdant AI explains complex concepts in plain language and helps employees make confident decisions.',
+                title: 'Savings Challenges',
+                desc: 'Join optional challenges like the 52-week challenge, a no-spend weekend or a round-up week to build habits in a fun, low-pressure way.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -117,7 +117,7 @@ export default function ProductPage() {
               <div key={i} className="card-feature p-8">
                 <div
                   className="w-11 h-11 rounded-2xl flex items-center justify-center mb-5"
-                  style={{ background: 'rgba(24,37,27,0.08)', color: 'var(--forest)' }}
+                  style={{ background: 'rgba(10,31,26,0.08)', color: 'var(--forest)' }}
                 >
                   {feature.icon}
                 </div>
@@ -127,7 +127,7 @@ export default function ProductPage() {
                 >
                   {feature.title}
                 </h3>
-                <p style={{ color: 'rgba(24,37,27,0.6)', fontSize: '0.9rem', lineHeight: 1.75 }}>
+                <p style={{ color: 'rgba(10,31,26,0.6)', fontSize: '0.9rem', lineHeight: 1.75 }}>
                   {feature.desc}
                 </p>
               </div>
@@ -145,24 +145,24 @@ export default function ProductPage() {
                 Privacy First
               </p>
               <h2 className="headline-lg mb-6" style={{ color: 'var(--forest)' }}>
-                Financial data is
+                Your savings
                 <br />
-                <em className="italic-accent">deeply personal.</em>
+                <em className="italic-accent">are your business.</em>
               </h2>
-              <p style={{ color: 'rgba(24,37,27,0.6)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '2rem' }}>
-                Verdant Finance is built with privacy at its core. Employees control exactly what they connect and share. Their individual financial data is never visible to their employer.
+              <p style={{ color: 'rgba(10,31,26,0.6)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '2rem' }}>
+                Nest Builder Finance is built with privacy in mind. You choose which goals to set up, and your employer never sees your individual balances.
               </p>
               <div className="space-y-5">
                 {[
-                  { title: 'Bank-level encryption', desc: 'All financial data is encrypted in transit and at rest.' },
-                  { title: 'Employee-controlled access', desc: 'Employees connect accounts themselves and can disconnect anytime.' },
-                  { title: 'Employer sees only aggregates', desc: 'Companies see program engagement metrics — never individual data.' },
-                  { title: 'No data selling', desc: 'We never sell or share employee financial data with third parties.' },
+                  { title: 'Educational tools only', desc: 'Goals, trackers and reminders help you stay on course. They never move your money for you.' },
+                  { title: 'You choose your goals', desc: 'Set up, change or remove goals and reminders whenever you like.' },
+                  { title: 'Employers see only aggregates', desc: 'Companies see overall participation only, never individual balances.' },
+                  { title: 'No data selling', desc: 'We never sell your personal information or share your mobile number for marketing.' },
                 ].map(item => (
                   <div key={item.title} className="flex items-start gap-4">
                     <div
                       className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                      style={{ background: 'rgba(24,37,27,0.1)' }}
+                      style={{ background: 'rgba(10,31,26,0.1)' }}
                     >
                       <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="var(--forest)" strokeWidth="3">
                         <path d="M5 13l4 4L19 7" />
@@ -170,7 +170,7 @@ export default function ProductPage() {
                     </div>
                     <div>
                       <p style={{ fontWeight: 600, color: 'var(--forest)', fontSize: '0.9rem', marginBottom: '0.2rem' }}>{item.title}</p>
-                      <p style={{ color: 'rgba(24,37,27,0.55)', fontSize: '0.85rem' }}>{item.desc}</p>
+                      <p style={{ color: 'rgba(10,31,26,0.55)', fontSize: '0.85rem' }}>{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -180,7 +180,7 @@ export default function ProductPage() {
             {/* Privacy visual */}
             <div
               className="rounded-2xl p-8"
-              style={{ background: 'var(--ivory)', border: '1px solid rgba(24,37,27,0.1)' }}
+              style={{ background: 'var(--ivory)', border: '1px solid rgba(10,31,26,0.1)' }}
             >
               <div className="flex items-center gap-3 mb-6">
                 <div
@@ -192,28 +192,28 @@ export default function ProductPage() {
                   </svg>
                 </div>
                 <div>
-                  <p style={{ fontWeight: 600, color: 'var(--forest)', fontSize: '0.9rem' }}>Your Financial Data</p>
-                  <p className="font-mono-label" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>You control what you share</p>
+                  <p style={{ fontWeight: 600, color: 'var(--forest)', fontSize: '0.9rem' }}>Your Savings Settings</p>
+                  <p className="font-mono-label" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>You control what you turn on</p>
                 </div>
               </div>
 
               <div className="space-y-3">
                 {[
-                  { label: 'Bank accounts', connected: true },
-                  { label: 'Spending categories', connected: true },
-                  { label: 'Savings goals', connected: true },
-                  { label: 'Investment accounts', connected: false },
-                  { label: 'Credit score', connected: false },
+                  { label: 'Emergency fund goal', connected: true },
+                  { label: 'Payday reminders', connected: true },
+                  { label: 'Progress milestones', connected: true },
+                  { label: 'Savings challenges', connected: false },
+                  { label: 'Text message alerts', connected: false },
                 ].map(item => (
                   <div
                     key={item.label}
                     className="flex items-center justify-between p-3 rounded-xl"
-                    style={{ background: 'rgba(24,37,27,0.04)', border: '1px solid rgba(24,37,27,0.08)' }}
+                    style={{ background: 'rgba(10,31,26,0.04)', border: '1px solid rgba(10,31,26,0.08)' }}
                   >
                     <span style={{ fontSize: '0.85rem', color: 'var(--charcoal)', fontWeight: 500 }}>{item.label}</span>
                     <div
                       className="w-9 h-5 rounded-full flex items-center px-0.5 transition-all"
-                      style={{ background: item.connected ? 'var(--olive)' : 'rgba(24,37,27,0.15)' }}
+                      style={{ background: item.connected ? 'var(--olive)' : 'rgba(10,31,26,0.15)' }}
                     >
                       <div
                         className="w-4 h-4 bg-white rounded-full shadow-sm transition-all"
@@ -223,8 +223,8 @@ export default function ProductPage() {
                   </div>
                 ))}
               </div>
-              <p style={{ fontSize: '0.72rem', color: 'rgba(24,37,27,0.4)', marginTop: '1rem', textAlign: 'center' }}>
-                Conceptual — employees control their own permissions
+              <p style={{ fontSize: '0.72rem', color: 'rgba(10,31,26,0.4)', marginTop: '1rem', textAlign: 'center' }}>
+                Conceptual — you control your own settings
               </p>
             </div>
           </div>
@@ -235,18 +235,21 @@ export default function ProductPage() {
       <section className="py-28 px-6" style={{ background: 'var(--forest)' }}>
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="headline-lg text-white mb-8">
-            Ready to give your team
+            Ready to help your team
             <br />
-            <em className="italic-accent">financial peace of mind?</em>
+            <em className="italic-accent">start saving?</em>
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link href="/talk-to-sales" className="btn-primary">
-              Get Started →
+              Offer It to Your Team →
             </Link>
             <Link href="/for-employers" className="btn-outline">
               For Employers
             </Link>
           </div>
+          <p style={{ color: 'rgba(241,248,244,0.5)', fontSize: '0.78rem', lineHeight: 1.7, maxWidth: '460px', margin: '2.5rem auto 0' }}>
+            Nest Coach provides general savings education only and is not financial, investment, legal or tax advice.
+          </p>
         </div>
       </section>
 

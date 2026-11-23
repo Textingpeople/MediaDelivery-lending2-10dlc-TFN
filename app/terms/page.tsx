@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
-const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const today = 'November 23, 2026';
 
 export default function TermsPage() {
   return (
@@ -14,13 +14,13 @@ export default function TermsPage() {
       {/* ── HERO ── */}
       <section className="pt-40 pb-20 px-6" style={{ background: 'var(--forest)' }}>
         <div className="max-w-4xl mx-auto">
-          <p className="font-mono-label mb-6" style={{ color: 'rgba(245,243,235,0.45)', fontSize: '0.65rem' }}>
+          <p className="font-mono-label mb-6" style={{ color: 'rgba(241,248,244,0.45)', fontSize: '0.65rem' }}>
             Legal
           </p>
           <h1 className="headline-xl text-white mb-4" style={{ maxWidth: '560px' }}>
             Terms of Service
           </h1>
-          <p style={{ color: 'rgba(245,243,235,0.5)', fontSize: '0.85rem' }}>
+          <p style={{ color: 'rgba(241,248,244,0.5)', fontSize: '0.85rem' }}>
             Last Updated: {today}
           </p>
         </div>
@@ -29,12 +29,15 @@ export default function TermsPage() {
       {/* ── CONTENT ── */}
       <section className="py-20 px-6" style={{ background: 'var(--ivory)' }}>
         <div className="max-w-3xl mx-auto">
-          <div className="space-y-10" style={{ fontSize: '0.92rem', lineHeight: 1.8, color: 'rgba(24,37,27,0.75)' }}>
+          <div className="space-y-10" style={{ fontSize: '0.92rem', lineHeight: 1.8, color: 'rgba(10,31,26,0.75)' }}>
 
             {/* Intro */}
             <div>
               <p>
-                These Terms of Service ("Terms") govern your access to and use of Verdant Finance's AI-powered financial wellness platform, website at <strong>verdantfinance.com</strong>, and related services (collectively, the "Service"). By accessing or using the Service, you agree to be bound by these Terms. If you do not agree, you may not use the Service.
+                These Terms of Service (&quot;Terms&quot;) govern your access to and use of the employer-offered savings program, website at <strong>nestbuilderfinance.com</strong>, and related services (collectively, the &quot;Service&quot;) operated by Media Delivery Solutions LLC, a Wyoming limited liability company, d/b/a Nest Builder Finance (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By accessing or using the Service, you agree to be bound by these Terms. If you do not agree, you may not use the Service.
+              </p>
+              <p className="mt-3" style={{ fontWeight: 600, color: 'var(--forest)' }}>
+                Nest Builder Finance is not a bank. We do not hold, move, lend or invest your money.
               </p>
             </div>
 
@@ -44,17 +47,19 @@ export default function TermsPage() {
                 1. Description of Service
               </h2>
               <p className="mb-3">
-                Verdant Finance provides an AI-powered financial wellness platform designed for employees participating in employer-sponsored financial wellness programs. The Service includes:
+                Nest Builder Finance provides an employer-offered savings program designed to help employees build savings habits and emergency funds. The Service includes:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>A personalized financial dashboard showing net worth, goals, and spending insights</li>
-                <li>Verdant AI — an AI financial advisor that provides personalized guidance based on your financial situation</li>
-                <li>Goal planning and tracking tools for emergency funds, debt payoff, retirement, and more</li>
-                <li>SMS-based financial alerts and notifications (for users who opt in)</li>
-                <li>Employer-connected wellness program participation</li>
+                <li>Savings goal tools for things like an emergency fund, holidays, car repairs, or moving</li>
+                <li>An emergency fund tracker and progress milestones</li>
+                <li>Payday savings reminders</li>
+                <li>Nest Coach — an in-app assistant that shares short, educational savings tips</li>
+                <li>Optional savings challenges, such as the 52-week challenge, a no-spend weekend, or a round-up week</li>
+                <li>SMS-based savings alerts and notifications (for users who opt in)</li>
+                <li>Participation in your employer&apos;s savings program</li>
               </ul>
               <p className="mt-3">
-                The Service is intended for informational and educational purposes. Verdant AI does not constitute licensed financial, investment, legal, or tax advice. Always consult a qualified professional for decisions specific to your financial situation.
+                The Service provides educational tools and reminders only. Nest Coach does not constitute licensed financial, investment, legal, or tax advice. Always consult a qualified professional for decisions specific to your situation.
               </p>
             </div>
 
@@ -64,7 +69,7 @@ export default function TermsPage() {
                 2. Eligibility
               </h2>
               <p>
-                To use the Service, you must be at least 18 years of age and an employee of an organization that has enrolled in Verdant Finance's employer financial wellness program. You must have a valid Employer ID provided by your HR or benefits team to create an account.
+                To use the Service, you must be at least 18 years of age and an employee of an organization that has enrolled in the Nest Builder Finance employer savings program. You must have a valid Employer ID provided by your HR or benefits team to create an account.
               </p>
             </div>
 
@@ -77,7 +82,7 @@ export default function TermsPage() {
                 To access the Service, you must create an account by providing accurate and complete information, including your name, work email address, Employer ID, and mobile phone number (if opting into SMS). You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account.
               </p>
               <p>
-                You agree to notify us immediately at <a href="mailto:support@verdantfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@verdantfinance.com</a> if you suspect unauthorized access to your account.
+                You agree to notify us immediately at <a href="mailto:support@nestbuilderfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@nestbuilderfinance.com</a> if you suspect unauthorized access to your account.
               </p>
             </div>
 
@@ -87,16 +92,31 @@ export default function TermsPage() {
                 4. SMS Communications
               </h2>
               <p className="mb-3">
-                Verdant Finance offers optional SMS messaging to deliver AI-powered financial alerts and account notifications. By opting in to SMS communications during onboarding, you agree to the following:
+                Nest Builder Finance offers optional SMS messaging to deliver savings alerts and account notifications. By opting in to SMS communications during onboarding, you agree to the following:
               </p>
 
               <div className="space-y-4">
                 <div>
                   <p className="font-mono-label mb-2" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>Types of Messages</p>
                   <ul className="list-disc pl-6 space-y-1">
-                    <li><strong>Transactional Account Notifications:</strong> Personalized financial insights from Verdant AI, goal milestone alerts, spending summaries, budget reminders, and account updates.</li>
-                    <li><strong>Promotional Marketing Messages:</strong> Special offers, product updates, and exclusive content related to Verdant Finance's financial wellness services.</li>
+                    <li><strong>Transactional Account Notifications:</strong> Savings goal progress, emergency fund milestones, payday reminders, and account updates.</li>
+                    <li><strong>Promotional Marketing Messages:</strong> New savings program features and monthly savings challenges.</li>
                   </ul>
+                </div>
+
+                <div>
+                  <p className="font-mono-label mb-2" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>Sample Messages</p>
+                  <p style={{ fontWeight: 600, color: 'var(--forest)', marginBottom: '0.5rem' }}>Account Notifications</p>
+                  <div className="space-y-1 mb-4">
+                    <p>1. Nest Builder Finance: You&apos;re signed up for savings alerts from your employer&apos;s savings program. Msg frequency varies. Msg & data rates may apply. Reply HELP for help, STOP to opt out.</p>
+                    <p>2. Nest Builder Finance: You&apos;re halfway to your emergency fund goal. See your progress at nestbuilderfinance.com. Reply STOP to opt out.</p>
+                    <p>3. Nest Builder Finance: Payday is Friday. Check your savings goals at nestbuilderfinance.com. Reply STOP to opt out.</p>
+                  </div>
+                  <p style={{ fontWeight: 600, color: 'var(--forest)', marginBottom: '0.5rem' }}>Promotional</p>
+                  <div className="space-y-1">
+                    <p>4. Nest Builder Finance: New in your savings program: goal templates for holidays and car repairs. Try them at nestbuilderfinance.com. Reply STOP to opt out.</p>
+                    <p>5. Nest Builder Finance: This month&apos;s savings challenge: the no-spend weekend. Join at nestbuilderfinance.com. Reply STOP to opt out.</p>
+                  </div>
                 </div>
 
                 <div>
@@ -116,26 +136,26 @@ export default function TermsPage() {
                 <div>
                   <p className="font-mono-label mb-2" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>Help</p>
                   <p>
-                    Reply <strong>HELP</strong> to any message for assistance, or contact us at <a href="mailto:support@verdantfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@verdantfinance.com</a>.
+                    Reply <strong>HELP</strong> to any message for assistance, or contact us at <a href="mailto:support@nestbuilderfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@nestbuilderfinance.com</a>.
                   </p>
                 </div>
 
                 <div>
                   <p className="font-mono-label mb-2" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>Rates & Frequency</p>
                   <p>
-                    Standard message and data rates may apply. Message frequency varies based on your financial activity and account settings.
+                    Standard message and data rates may apply. Message frequency varies based on your savings goals, pay schedule, and account settings.
                   </p>
                 </div>
 
                 <div
                   className="rounded-xl p-4"
-                  style={{ background: 'rgba(72,82,56,0.06)', border: '1px solid rgba(72,82,56,0.15)' }}
+                  style={{ background: 'rgba(26,122,82,0.06)', border: '1px solid rgba(26,122,82,0.15)' }}
                 >
                   <p style={{ fontWeight: 600, color: 'var(--forest)', marginBottom: '0.5rem' }}>
                     No Mobile Data Sharing
                   </p>
                   <p>
-                    No mobile information will be shared with or sold to third parties for marketing or promotional purposes. Your mobile number is used solely to deliver the SMS messages you have opted into.
+                    No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties. Your mobile number is used solely to deliver the SMS messages you have opted into.
                   </p>
                 </div>
               </div>
@@ -144,18 +164,18 @@ export default function TermsPage() {
             {/* 5. Financial Information Disclaimer */}
             <div>
               <h2 className="font-serif mb-4" style={{ fontSize: '1.3rem', fontWeight: 600, color: 'var(--forest)' }}>
-                5. Financial Information Disclaimer
+                5. Educational Tools Disclaimer
               </h2>
               <p className="mb-3">
-                Verdant AI provides personalized financial insights and guidance based on the information you provide. This guidance is for informational and educational purposes only and does not constitute:
+                Nest Coach provides general savings education only and is not financial, investment, legal or tax advice. This information does not constitute:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Licensed financial planning or investment advice</li>
                 <li>Legal or tax advice</li>
-                <li>A guarantee of financial outcomes</li>
+                <li>A guarantee of any financial outcome</li>
               </ul>
               <p className="mt-3">
-                You should consult a licensed financial advisor, attorney, or tax professional before making significant financial decisions. Verdant Finance is not responsible for any financial decisions you make based on information provided through the Service.
+                You should consult a licensed financial advisor, attorney, or tax professional before making significant financial decisions. Nest Builder Finance is not responsible for any financial decisions you make based on information provided through the Service.
               </p>
             </div>
 
@@ -165,7 +185,7 @@ export default function TermsPage() {
                 6. Privacy
               </h2>
               <p>
-                Your use of the Service is also governed by our <Link href="/privacy" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>Privacy Policy</Link>, which is incorporated into these Terms by reference. Your employer will never have access to your individual financial data — only aggregate, anonymized wellness metrics.
+                Your use of the Service is also governed by our <Link href="/privacy" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>Privacy Policy</Link>, which is incorporated into these Terms by reference. Your employer will never have access to your individual balances — only aggregate participation information.
               </p>
             </div>
 
@@ -190,7 +210,7 @@ export default function TermsPage() {
                 8. Termination
               </h2>
               <p>
-                We reserve the right to suspend or terminate your account at any time for violation of these Terms or at the request of your employer. You may also delete your account at any time by contacting us at <a href="mailto:support@verdantfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@verdantfinance.com</a>.
+                We reserve the right to suspend or terminate your account at any time for violation of these Terms or at the request of your employer. You may also delete your account at any time by contacting us at <a href="mailto:support@nestbuilderfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@nestbuilderfinance.com</a>.
               </p>
             </div>
 
@@ -200,7 +220,7 @@ export default function TermsPage() {
                 9. Limitation of Liability
               </h2>
               <p>
-                To the fullest extent permitted by law, Verdant Finance shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the Service, including any financial decisions made based on information provided by Verdant AI.
+                To the fullest extent permitted by law, Nest Builder Finance shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the Service, including any financial decisions made based on information provided by Nest Coach.
               </p>
             </div>
 
@@ -223,9 +243,11 @@ export default function TermsPage() {
                 For questions about these Terms, please contact us:
               </p>
               <div className="mt-3 space-y-1">
-                <p><strong>Verdant Finance</strong></p>
-                <p>Email: <a href="mailto:support@verdantfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@verdantfinance.com</a></p>
-                <p>Website: <a href="https://verdantfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>verdantfinance.com</a></p>
+                <p><strong>Media Delivery Solutions LLC</strong>, a Wyoming limited liability company, d/b/a Nest Builder Finance</p>
+                <p>Address: 9 Johnston Dr, Bloomsbury, NJ 08804, United States</p>
+                <p>Phone: <a href="tel:+19083998307" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>(908) 399-8307</a></p>
+                <p>Email: <a href="mailto:support@nestbuilderfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@nestbuilderfinance.com</a></p>
+                <p>Website: <a href="https://nestbuilderfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>nestbuilderfinance.com</a></p>
               </div>
             </div>
 

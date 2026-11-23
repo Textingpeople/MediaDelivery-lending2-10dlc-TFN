@@ -18,7 +18,7 @@ export default function Nav() {
       <nav
         className="w-full max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
         style={{
-          background: scrolled ? 'rgba(10,31,26,0.95)' : 'transparent',
+          background: scrolled ? 'rgba(15,46,38,0.95)' : 'transparent',
           backdropFilter: scrolled ? 'blur(20px)' : 'none',
           borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : 'none',
           transition: 'background 0.3s ease, border-color 0.3s ease',
@@ -51,7 +51,7 @@ export default function Nav() {
               letterSpacing: '-0.01em',
             }}
           >
-            NestBuilder
+            Nest Builder Finance
           </span>
         </Link>
 
@@ -149,7 +149,7 @@ export default function Nav() {
         <div
           className="absolute top-20 left-4 right-4 rounded-2xl p-6 md:hidden"
           style={{
-            background: 'rgba(10,31,26,0.97)',
+            background: 'rgba(15,46,38,0.97)',
             backdropFilter: 'blur(20px)',
             border: '1px solid rgba(255,255,255,0.1)',
           }}

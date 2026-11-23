@@ -14,27 +14,30 @@ export default function Footer() {
                   fontFamily: 'Playfair Display, Georgia, serif',
                   fontWeight: 600,
                   fontSize: '1.4rem',
-                  color: 'rgba(245,243,235,0.85)',
+                  color: 'rgba(241,248,244,0.85)',
                   letterSpacing: '-0.01em',
                 }}
               >
-                Verdant Finance
+                Nest Builder Finance
               </span>
             </div>
             <p
               className="headline-md italic-accent mb-6"
-              style={{ color: 'rgba(245,243,235,0.7)', maxWidth: '320px', fontSize: '1.4rem' }}
+              style={{ color: 'rgba(241,248,244,0.7)', maxWidth: '320px', fontSize: '1.4rem' }}
             >
-              Financial wellness that grows with your people.
+              A safety net, built one paycheck at a time.
             </p>
-            <p style={{ color: 'rgba(245,243,235,0.45)', fontSize: '0.85rem', lineHeight: '1.7', maxWidth: '280px' }}>
-              Helping companies build financially secure, confident, and resilient workforces.
+            <p style={{ color: 'rgba(241,248,244,0.45)', fontSize: '0.85rem', lineHeight: '1.7', maxWidth: '280px' }}>
+              An employer-offered savings program with educational tools and reminders to help employees build an emergency fund.
+            </p>
+            <p style={{ color: 'rgba(241,248,244,0.35)', fontSize: '0.78rem', lineHeight: '1.7', maxWidth: '280px', marginTop: '0.75rem' }}>
+              9 Johnston Dr, Bloomsbury, NJ 08804, United States · <a href="tel:+19083998307" style={{ color: 'inherit' }}>(908) 399-8307</a>
             </p>
           </div>
 
           {/* Product */}
           <div>
-            <p className="font-mono-label mb-6" style={{ color: 'rgba(245,243,235,0.4)', fontSize: '0.65rem' }}>
+            <p className="font-mono-label mb-6" style={{ color: 'rgba(241,248,244,0.4)', fontSize: '0.65rem' }}>
               Product
             </p>
             <ul className="space-y-3">
@@ -46,9 +49,9 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    style={{ color: 'rgba(245,243,235,0.6)', fontSize: '0.9rem', transition: 'color 0.2s' }}
+                    style={{ color: 'rgba(241,248,244,0.6)', fontSize: '0.9rem', transition: 'color 0.2s' }}
                     onMouseEnter={e => (e.currentTarget.style.color = 'var(--ivory)')}
-                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,243,235,0.6)')}
+                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(241,248,244,0.6)')}
                   >
                     {item.label}
                   </Link>
@@ -59,7 +62,7 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <p className="font-mono-label mb-6" style={{ color: 'rgba(245,243,235,0.4)', fontSize: '0.65rem' }}>
+            <p className="font-mono-label mb-6" style={{ color: 'rgba(241,248,244,0.4)', fontSize: '0.65rem' }}>
               Legal
             </p>
             <ul className="space-y-3">
@@ -71,9 +74,9 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    style={{ color: 'rgba(245,243,235,0.6)', fontSize: '0.9rem', transition: 'color 0.2s' }}
+                    style={{ color: 'rgba(241,248,244,0.6)', fontSize: '0.9rem', transition: 'color 0.2s' }}
                     onMouseEnter={e => (e.currentTarget.style.color = 'var(--ivory)')}
-                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,243,235,0.6)')}
+                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(241,248,244,0.6)')}
                   >
                     {item.label}
                   </Link>
@@ -84,23 +87,23 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div style={{ borderTop: '1px solid rgba(245,243,235,0.1)', paddingTop: '2rem' }}>
+        <div style={{ borderTop: '1px solid rgba(241,248,244,0.1)', paddingTop: '2rem' }}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="font-mono-label" style={{ color: 'rgba(245,243,235,0.3)', fontSize: '0.65rem' }}>
-              © {new Date().getFullYear()} Verdant Finance. All rights reserved.
+            <p className="font-mono-label" style={{ color: 'rgba(241,248,244,0.3)', fontSize: '0.65rem' }}>
+              © {new Date().getFullYear()} Media Delivery Solutions LLC, d/b/a Nest Builder Finance. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
-              <p className="font-mono-label" style={{ color: 'rgba(245,243,235,0.3)', fontSize: '0.65rem' }}>
-                verdantfinance.com
+              <p className="font-mono-label" style={{ color: 'rgba(241,248,244,0.3)', fontSize: '0.65rem' }}>
+                nestbuilderfinance.com
               </p>
               <a
                 href="https://www.linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(245,243,235,0.1)', transition: 'background 0.2s' }}
-                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(245,243,235,0.2)')}
-                onMouseLeave={e => (e.currentTarget.style.background = 'rgba(245,243,235,0.1)')}
-                aria-label="Verdant Finance on LinkedIn"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(241,248,244,0.1)', transition: 'background 0.2s' }}
+                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(241,248,244,0.2)')}
+                onMouseLeave={e => (e.currentTarget.style.background = 'rgba(241,248,244,0.1)')}
+                aria-label="Nest Builder Finance on LinkedIn"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
